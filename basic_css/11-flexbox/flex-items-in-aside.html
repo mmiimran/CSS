@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Five flex items in an aside</title>  
+<link rel="stylesheet" href="c/examples.css"/>
+<style>
+img {
+	background-image: 
+		linear-gradient(to bottom right, 
+			lightblue, 
+			white 50%, 
+			gold 50%, 
+			white);
+	width: 100px; 
+	height: 100px;
+	box-sizing: border-box; 
+}
+
+/*------- comment out or edit properties below -------*/ 
+aside {
+	background-color: rgba(0,0,0,0.1);
+	display: flex;
+	border: 1px dotted;
+	padding: 10px;
+	align-items: center;
+	line-height: 100px;
+}
+aside > * {
+	border: 1px solid;
+	margin: 0 10px;
+	padding: 0 10px;
+}
+aside > span {
+	border-style: dashed;
+	align-self: center;
+	line-height: 1.2em;
+}
+</style>
+</head>
+<body>
+
+<aside>
+
+<!-- a comment -->
+<h1>Header</h1>
+
+<img src="images/foo.jpg" alt="">
+<span>Some text</span> <a href="foo.html">with a link</a> <span>and more text</span>
+
+</aside>
+</body>
+</html>
