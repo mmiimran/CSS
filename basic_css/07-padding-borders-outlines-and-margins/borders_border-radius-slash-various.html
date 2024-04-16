@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Different elliptical rounding calculations</title>
+<style type="text/css">
+body {display: flex; justify-content: center; max-width: max-content;}
+.arena p {font-size: 4em; border: 0.1em solid black; padding: 2em;
+	position: relative;}
+.arena p b {
+	position: absolute;
+	box-sizing: border-box;
+	width: 5em; height: 3em; border-radius: 5em / 3em;
+ 	border: 0.1em dashed green;
+ 	background-image:
+		radial-gradient(5em 3em at center, transparent 4.5em, rgba(0,128,0,0.25) 4.9em),
+		linear-gradient(to left, black, black),
+		linear-gradient(to left, black, black);
+	background-repeat: no-repeat;
+	background-size: 100% 100%, 50% 1px, 1px 50%;
+	background-color: #FFDC;
+	top: -0.1em;
+	}
+.arena p b.left {
+	left: -0.1em;
+	background-position: center, center left, top center;
+}
+.arena p b.right {
+	width: 4em; height: 6em; border-radius: 4em / 6em;
+ 	background-image:
+		radial-gradient(2em 3em at center, transparent 3.5em, rgba(0,128,0,0.25) 3.9em),
+		linear-gradient(to left, black, black),
+		linear-gradient(to left, black, black);
+	background-position: center, center right, top center;
+	right: -0.1em;
+}
+
+.arena p b i {
+	position: absolute;
+	margin-top: -0.85em;
+	background: #FFD;
+	font: 0.5em Arvo, serif;
+}
+.arena p b i:first-child {top: 52%; left: 1.5em;}
+.arena p b.right i:first-child {right: 0.75em; left: auto;}
+.arena p b i:nth-child(2) {top: 28%; left: 50%; margin-left: -1.5ch;}
+</style>
+<style type="text/css">
+.arena p {border-radius: 2.5em 2em / 1.5em 3em;}
+</style>
+</head>
+<body>
+
+<section class="arena">
+
+<p>
+My borders are rounded.
+<b class="top left"><i>2.5em</i><i>1.5em</i></b>
+<b class="top right"><i>2em</i><i>3em</i></b>
+</p>
+
+</section>
+
+</body>
+</html>
