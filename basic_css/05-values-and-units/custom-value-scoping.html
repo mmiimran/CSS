@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Scoping custom values to certain contexts</title>
+<style type="text/css">
+body {padding: 1em;}
+html {
+    --base-color: #666;
+}
+aside {
+    --base-color: #CCC;
+}
+
+h1 {color: var(--base-color);}
+</style>
+</head>
+<body>
+
+
+<div class="arena">
+
+<h1>Heading 1</h1>
+<p>Main text.</p>
+
+<aside>
+<h1>Heading 1</h1>
+<p>An aside.</p>
+</aside>
+
+<h1>Heading 1</h1>
+<p>Main text.</p>
+
+</div>
+
+
+</body>
+</html>
