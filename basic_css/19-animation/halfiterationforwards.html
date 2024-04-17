@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<title>Animation-fill-mode and partial iterations</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
+div {
+	padding: 20px;
+	margin: 20px;
+	border: 5px black solid;
+	font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">div {width: 100%; height: auto;}
+div {	animation-name: size;
+	animation-duration: 10s;
+	animation-timing-mode: linear;
+	animation-direction: reverse;
+	animation-delay: 1s;
+	animation-iteration-count: 0.25;
+	animation-fill-mode: both;
+}
+@keyframes size {
+	0%   {height: 500px; width: 500px;}
+	100% {height: 100px; width: 100px;}
+}
+</style>
+<div id="blue">Where does animation start? Stop?</div>
+<p>…does it start at 100% width? Does it make it to 500px? or does is stop and 200px, and stay there? </p>
+</body>
+</html>

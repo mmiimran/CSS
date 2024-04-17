@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Animating properties with no midpoint value</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
+div {
+    padding:20px;
+    margin:20px;
+    border:5px black solid;
+    font-family:sans-serif;
+}
+</style>
+</head>
+
+<body>
+<style contenteditable id="editme">div {
+    animation: height linear infinite 5s;
+}
+@keyframes height {
+    0% {
+        height: auto;
+        width: auto;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+    }
+}
+</style>
+<div id="blue">Height change?</div>
+</body>
+</html>

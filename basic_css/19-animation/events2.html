@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<title>AnimationIteration event</title>
+<link href="../styles/style-edit.css" rel="stylesheet"/>
+<style>
+div {
+	padding: 20px;
+	border: 5px black solid!important;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 2rem;
+}
+@keyframes red {
+	from, 30% {
+		background-color: #f00;
+	}
+	to {
+		background-color: #f33;
+	}
+}
+@keyframes green {
+	from, 30% {
+		background-color: #030;
+	}
+	to {
+		background-color: #393;
+	}
+}
+@keyframes blue {
+	from, 30% {
+		background-color: #0000ff;
+	}
+	to {
+		background-color: #33f;
+	}
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">#blue {
+	animation: red 5s linear 5, green 4s linear 4, blue 3s linear 3;
+}
+#red {
+	animation: red 5s linear 5 -12s, green 4s linear 4 -12s, blue 3s linear 3 -12s;
+}
+</style>
+<div id="blue"><p>Open the console and tell me what you see.</p></div>
+<div id="red"><p>This has a long delay</p></div>
+<script>
+  const foo = document.getElementById('blue');
+  console.dir(foo);
+  foo.addEventListener( 'animationend',
+    function( event ) {
+        console.log('1 animation end');
+    },
+    false );
+  foo.addEventListener( 'animationstart',
+    function( event ) {
+        console.log('1 animation start');
+    },
+    false );
+  foo.addEventListener( 'animationiteration',
+    function( event ) {
+        console.log('1 animation iteration');
+    },
+    false );
+  const bar = document.getElementById('red');
+  console.dir(bar);
+  bar.addEventListener( 'animationend',
+    function( event ) {
+        console.log('2 animation end');
+    },
+    false );
+  bar.addEventListener( 'animationstart',
+    function( event ) {
+        console.log('2 animation start');
+    },
+    false );
+  bar.addEventListener( 'animationiteration',
+    function( event ) {
+        console.log('2 animation iteration');
+    },
+    false );
+</script>
+</body>
+</html>

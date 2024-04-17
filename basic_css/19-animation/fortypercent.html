@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<title>Negative value for animation-delay</title>
+<link href="../styles/style-edit.css" rel="stylesheet"/>
+<style>
+div {
+	border: 5px black solid;
+	color: white;
+	width: 10px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	margin-bottom: 2px;
+}
+article {
+	height: 10px;
+	background: red;
+	background: linear-gradient(to right, black 10%, white 10%);
+	background-size: 50px 10px;
+	margin: 20px 0;
+	position: relative; 
+}
+article::after {
+	content:'';
+	height:10px;
+	width:5px;
+	position:absolute;
+	left:400px;
+	background-color:red;
+}
+article::after,
+article::before {
+	height:300px!important;
+	opacity:0.25;content:"";
+}
+article::before {
+	position:absolute;
+	left:1000px;
+	width:5px;
+	background-color:black;
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">div {	animation-name: move;
+	animation-duration: 10s;
+	animation-delay: -4s;
+	animation-timing-function: linear;
+}
+@keyframes move {
+	from {transform: translateX(0);}
+	to {transform: translateX(1000px);}
+}
+</style>
+<article></article>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<title>Animation chaining</title>
+<link href="../styles/style-edit.css" rel="stylesheet"/>
+<style>
+div {
+	padding: 20px;
+	border: 1px solid rgb(0 0 0 / 0.3);
+	box-shadow: 3px 3px 3px rgb(0 0 0 / 0.3);
+}
+@keyframes red {
+	100% {
+		background-color: red;
+	}
+}
+@keyframes orange {
+	100% {
+		background-color: orange;
+	}
+}
+@keyframes yellow {
+	100% {
+		background-color: yellow;
+	}
+}
+@keyframes green {
+	100% {
+		background-color: green;
+	}
+}
+@keyframes blue {
+	100% {
+		background-color: blue;
+	}
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">.rainbow {
+  animation-name: red, orange, yellow, blue, green;
+  animation-duration: 1s, 3s, 5s, 7s, 11s;
+  animation-delay: 3s, 4s, 7s, 12s, 19s;
+}
+</style>
+<div class="rainbow">One animation happens after another.</div>
+</body>
+</html>

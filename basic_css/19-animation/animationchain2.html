@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>	
+<meta charset="utf-8"/>
+<title>Animation chaining with JavaScript</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
+li {
+	padding: 20px;
+	border: 1px solid rgb(0 0 0 / 0.3);
+	box-shadow: 3px 3px 3px rgb(0 0 0 / 0.3);
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">li {background-color: white; animation-fill-mode: forwards;}
+li:nth-of-type(1) {animation-duration: 1s; animation-name: red;}
+li:nth-of-type(2) {animation-duration: 2s;}
+li:nth-of-type(3) {animation-duration: 3s;}
+li:nth-of-type(4) {animation-duration: 4s;}
+li:nth-of-type(5) {animation-duration: 5s;}
+
+@keyframes red {
+	100% {background-color: red;}
+}
+@keyframes orange {
+	100% {background-color: orange;}
+}
+@keyframes yellow {
+	100% {background-color: yellow;}
+}
+@keyframes green {
+	100% {background-color: green;}
+}
+@keyframes blue {
+	100% {background-color: blue;}
+}
+</style>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+</ul>
+</body>
+<script>
+document.querySelectorAll('li')[0].addEventListener( 'animationend',
+      () => {
+          document.querySelectorAll('li')[1].style.animationName = 'orange';
+      },
+      false );
+
+document.querySelectorAll('li')[1].addEventListener( 'animationend',
+      () =>  {
+          document.querySelectorAll('li')[2].style.animationName = 'yellow';
+      },
+      false );
+
+document.querySelectorAll('li')[2].addEventListener( 'animationend',
+      () => {
+          document.querySelectorAll('li')[3].style.animationName = 'green';
+      },
+      false );
+
+document.querySelectorAll('li')[3].addEventListener( 'animationend',
+      () =>  {
+          document.querySelectorAll('li')[4].style.animationName = 'blue';
+      },
+      false );
+</script>
+</html>

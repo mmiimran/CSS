@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8" />
+<title>Bouncing ball: animation-direction property</title>
+<link href="../styles/style-edit.css" rel="stylesheet" />
+<style>
+body {
+	height: 100vh;
+}
+.ball {
+	height: 50px;
+	width: 50px;
+	background-color: blue;
+	border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">.ball {
+        animation-name: bouncing;
+	animation-duration: 400ms;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+@keyframes bouncing {
+	from {transform: translateY(500px);}
+	to {transform: translateY(0);}
+}
+</style>
+<div class="ball"></div>
+</body>
+</html>

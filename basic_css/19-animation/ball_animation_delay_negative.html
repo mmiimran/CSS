@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+<title>Reduced interations due to negative animation-delay</title>
+<link href="../styles/style-edit.css" rel="stylesheet"/>
+<style>
+.ball {
+	height: 20px;
+	width: 20px;
+	background-color: red;
+	border-radius: 50%;
+}
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(500px);
+	}
+}
+</style>
+</head>
+<body>
+<style contenteditable id="editme">.ball {
+	animation-name: bounce;
+	animation-duration: 2000ms;
+	animation-delay: -8000ms;
+	animation-iteration-count: 10;
+	animation-direction: alternate;
+}
+</style>
+<div class="ball"></div>
+</body>
+</html>

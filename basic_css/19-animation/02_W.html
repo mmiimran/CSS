@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US>
+<head>
+<meta charset="utf-8">
+<title>Pencil animating a W</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
+.pencil {
+    color: blue;
+    height: 140px;
+    width: 140px;
+    margin: 10px auto;
+    font-size: 140px;
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+    line-height: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 100px 123px;
+}
+.pencil {
+    animation: W 3s infinite linear;
+}
+</style>
+
+</head>
+<body>
+<style contenteditable id="editme">
+@keyframes W {
+    from {
+        left: 0;
+        top: 0;
+    }
+    25%,
+    75% {
+        top: 100%;
+    }
+    50% {
+        top: 50%;
+    }
+    to {
+        left: 100%;
+        top: 0;
+    }
+}</style>
+<p></p>
+<div class="pencil">✎</div>
+</body>
+</html>
