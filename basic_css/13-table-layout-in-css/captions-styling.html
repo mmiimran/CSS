@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Styling captions and tables</title>
+<link rel="stylesheet" type="text/css" href="c/baseline.css">
+<style type="text/css">
+body {display: flex; gap: 2em;}
+table {color: white; background: #840; margin: 0.5em 0;}
+caption {background: #B84; margin: 1em 0;}
+table.one caption {caption-side: top;}
+table.two caption {caption-side: bottom;}
+td {padding: 0.5em;}
+</style>
+</head>
+<body>
+
+<table class="one">
+	<caption>Table 77. The Question</caption>
+	<tr>
+		<td>hey</td>
+		<td>there</td>
+	</tr>
+	<tr>
+		<td>what’s</td>
+		<td>up?</td>
+	</tr>
+	<tr>
+		<td>not</td>
+		<td>much</td>
+	</tr>
+</table>
+
+<table class="two">
+	<caption>Table 77. The Question</caption>
+	<tr>
+		<td>hey</td>
+		<td>there</td>
+	</tr>
+	<tr>
+		<td>what’s</td>
+		<td>up?</td>
+	</tr>
+	<tr>
+		<td>not</td>
+		<td>much</td>
+	</tr>
+</table>
+
+</body>
+</html>
