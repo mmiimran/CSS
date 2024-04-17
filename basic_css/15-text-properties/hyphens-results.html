@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Hyphenation results</title>
+<style type="text/css">
+.cl01 p {hyphens: auto;}
+.cl02 p {hyphens: manual;}
+.cl03 p {hyphens: none;}
+
+table {border-collapse: collapse;}
+
+th, td {vertical-align: top;}
+th {font: 115% Open Sans, sans-serif; opacity: 0.666;}
+
+thead th:not(:empty) {inline-size: 13em; border-block-end: 1px solid rgba(0,0,0,0.5); text-align: start;}
+thead th:nth-of-type(2) {padding-inline-start: 1em;}
+tbody th {inline-size: 11em; padding-block-start: 0.75em; padding-inline-end: 0.5em; border-inline-end: 1px solid rgba(0,0,0,0.25); text-align: end;}
+tbody th > * {display: block;}
+
+tbody tr > * {border-bottom: 1px solid rgba(0,0,0,0.125);}
+tbody td:nth-of-type(1) {padding-inline-start: 1em;}
+tbody td:nth-of-type(1) p {inline-size: 11em;}
+tbody td:nth-of-type(2) p {inline-size: 9em;}
+tbody td:nth-of-type(3) p {inline-size: 7em;}
+
+td p {border: 2px dashed orange;}
+</style>
+</head>
+<body>
+
+<table>
+<thead>
+<tr class="labels">
+<th></th>
+<th class="d01"><strong>12 em wide</strong></th>
+<th class="d02"><strong>10 em wide</strong></th>
+<th class="d03"><strong>8 em wide</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="labels">
+<strong>hyphens: auto</strong>
+<em>No soft hyphen entities</em>
+</th>
+<td class="cl01"><p>Supercalifragilisticexpialidocious antidisestablishmentarianism.</p></td>
+<td class="cl01"><p>Supercalifragilisticexpialidocious antidisestablishmentarianism.</p></td>
+<td class="cl01"><p>Supercalifragilisticexpialidocious antidisestablishmentarianism.</p></td>
+</tr>
+<tr>
+<th class="labels">
+<strong>hyphens: manual</strong>
+<em>No soft hyphen entities</em>
+</th>
+<td class=cl02"><p>Supercalifragilisticexpialidocious antidisestablishmentarianism.</p></td>
+<td class=cl02"><p>Supercalifragilisticexpialidocious antidisestablishmentarianism.</p></td>
+<td class=cl02"><p>Supercalifragilisticexpialidocious antidisestablishmentarianism.</p></td>
+</tr>
+<tr>
+<th class="labels">
+<strong>hyphens: manual</strong>
+<em>Soft hyphen entities</em>
+</th>
+<td class=cl03"><p>Super&shy;cali&shy;fragi&shy;listic&shy;expi&shy;ali&shy;docious 
+anti&shy;dis&shy;establish&shy;ment&shy;arian&shy;ism.</p></td>
+<td class=cl03"><p>Super&shy;cali&shy;fragi&shy;listic&shy;expi&shy;ali&shy;docious 
+anti&shy;dis&shy;establish&shy;ment&shy;arian&shy;ism.</p></td>
+<td class=cl03"><p>Super&shy;cali&shy;fragi&shy;listic&shy;expi&shy;ali&shy;docious 
+anti&shy;dis&shy;establish&shy;ment&shy;arian&shy;ism.</p></td>
+</tr>
+<tr>
+<th class="labels">
+<strong>hyphens: none</strong>
+<em>Soft hyphen entities</em>
+</th>
+<td class=cl04"><p>Super&shy;cali&shy;fragi&shy;listic&shy;expi&shy;ali&shy;docious 
+anti&shy;dis&shy;establish&shy;ment&shy;arian&shy;ism.</p></td>
+<td class=cl04"><p>Super&shy;cali&shy;fragi&shy;listic&shy;expi&shy;ali&shy;docious 
+anti&shy;dis&shy;establish&shy;ment&shy;arian&shy;ism.</p></td>
+<td class=cl04"><p>Super&shy;cali&shy;fragi&shy;listic&shy;expi&shy;ali&shy;docious 
+anti&shy;dis&shy;establish&shy;ment&shy;arian&shy;ism.</p></td>
+</tr>
+</table>
+
+</body>
+</html>
